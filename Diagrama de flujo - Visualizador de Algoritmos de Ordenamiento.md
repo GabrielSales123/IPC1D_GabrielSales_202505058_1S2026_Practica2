@@ -1,7 +1,5 @@
 # Diagrama de flujo - Visualizador de Algoritmos de Ordenamiento
 
-
-
 ## Menu principal
 
 ```mermaid
@@ -48,6 +46,27 @@ U --> V[Fin]
 
 ```mermaid
 
+flowchart TD
+
+A[Inicio] --> B[Crear objetos]
+B --> C[Crear BubbleSort]
+C --> D[Crear QuickSort]
+D --> E[Crear ShellSort]
+E --> F[Crear Estadisticas]
+F --> G[Crear Reportes]
+
+G --> H[Evento de interfaz grafica]
+H --> I[Invocar MenuPrincipal]
+I --> J[Mostrar ventana]
+
+J --> K[Aplicacion en ejecucion]
+K --> L[Esperar acciones del usuario]
+
+L --> M[Seleccion de opciones]
+M --> N[Ejecutar algoritmos]
+N --> O[Actualizar visualizacion]
+O --> P[Actualizar estadisticas]
+P --> Q[Generar reportes]
+
+Q --> L
 ```
-
-
