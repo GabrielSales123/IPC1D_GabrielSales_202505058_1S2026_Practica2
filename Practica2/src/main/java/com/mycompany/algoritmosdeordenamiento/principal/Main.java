@@ -11,8 +11,9 @@ public class Main {
         QuickSort quick = new QuickSort();
         ShellSort shell = new ShellSort();
         Estadisticas est = new Estadisticas();
+        Reportes rep = new Reportes();
         java.awt.EventQueue.invokeLater(() -> {
-            new MenuPrincipal(burbuja, quick, shell, est).setVisible(true);
+            new MenuPrincipal(burbuja, quick, shell, est, rep).setVisible(true);
         });
     }
 }
