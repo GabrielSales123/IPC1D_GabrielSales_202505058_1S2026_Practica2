@@ -1,6 +1,7 @@
-com\mycompany\algoritmosdeordenamiento\principal\Main.class
-com\mycompany\algoritmosdeordenamiento\algoritmos\BubbleSort.class
 com\mycompany\algoritmosdeordenamiento\vista\MenuPrincipal.class
 com\mycompany\algoritmosdeordenamiento\algoritmos\QuickSort.class
 com\mycompany\algoritmosdeordenamiento\algoritmos\ShellSort.class
 com\mycompany\algoritmosdeordenamiento\vista\MenuPrincipal$1.class
+com\mycompany\algoritmosdeordenamiento\modelo\Estadisticas.class
+com\mycompany\algoritmosdeordenamiento\principal\Main.class
+com\mycompany\algoritmosdeordenamiento\algoritmos\BubbleSort.class

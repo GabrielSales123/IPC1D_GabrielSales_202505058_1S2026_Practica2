@@ -1,14 +1,20 @@
 
 package com.mycompany.algoritmosdeordenamiento.algoritmos;
 import com.mycompany.algoritmosdeordenamiento.vista.*;
+import com.mycompany.algoritmosdeordenamiento.modelo.*;
 
 public class BubbleSort {
-    public void ordenar(int[] datos, boolean orden, int velocidad, MenuPrincipal vista){
+    public void ordenar(int[] datos, boolean orden, int velocidad, MenuPrincipal vista, Estadisticas est){
+        est.reiniciar();
         int aux = 0;
         int[] estados = new int[datos.length];
         try{
             for (int i = 0; i < datos.length -1 ; i++){
+                est.sumarIteracion();
+                vista.actualizarEstadisticas(est);
                 for (int j = 0; j < datos.length-1; j++){ 
+                    est.sumarComparacion();
+                    vista.actualizarEstadisticas(est);
                     for (int k = 0; k < estados.length; k++) {
                         if (estados[k] != 3) {
                             estados[k] = 0;
@@ -26,6 +32,8 @@ public class BubbleSort {
                             aux = datos[j];
                             datos[j] = datos[j+1];
                             datos[j+1] = aux;
+                            est.sumarIntercambio();
+                            vista.actualizarEstadisticas(est);
                             vista.actualizarGrafica(datos, estados);
                             Thread.sleep(velocidad);  
                         }                        
@@ -38,6 +46,8 @@ public class BubbleSort {
                             aux = datos[j];
                             datos[j] = datos[j+1];
                             datos[j+1] = aux; 
+                            est.sumarIntercambio();
+                            vista.actualizarEstadisticas(est);
                             vista.actualizarGrafica(datos, estados);
                             Thread.sleep(velocidad);
                         }                
